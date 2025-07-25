@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan | Amanah Teknik Mandiri</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Detail layanan Amanah Teknik Mandiri, mencakup jasa konstruksi (KBLI 43300), instalasi listrik (KBLI 43211), perdagangan ritel (KBLI 47411), dan pembuatan website (KBLI 63122).">
+    <meta name="keywords" content="layanan konstruksi, instalasi air, jasa pengelasan, perdagangan komputer, jasa desain grafis, KBLI lengkap, proses kerja, ATM layanan">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS for advanced styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #111827;
+            --color-dark-secondary: #1f2937; /* gray-800 */
+        }
+
+        .page-header-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x600/000000/333333?text=Blueprint+Proyek');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-link-active {
+            color: var(--color-gold) !important;
+            font-weight: 600;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-list-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .service-list-item:hover {
+            background-color: rgba(255, 255, 255, 0.07);
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center space-x-3 text-white">
+                    <!-- TEMPAT LOGO FORMAT PNG -->
+                    <img src="assets/images/logo.png" alt="Logo Amanah Teknik Mandiri" class="h-12 w-auto">
+                    <span class="text-xl font-bold tracking-tight hidden sm:inline">Amanah Teknik Mandiri</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="/" class="text-gray-300 hover:text-amber-400 transition">Beranda</a>
+                    <a href="/layanan" class="nav-link-active hover:text-amber-400 transition">Layanan</a>
+                    <a href="/proyek" class="text-gray-300 hover:text-amber-400 transition">Proyek</a>
+                    <a href="/informasi" class="text-gray-300 hover:text-amber-400 transition">Informasi</a>
+                    <a href="/kontak" class="text-gray-300 hover:text-amber-400 transition">Kontak</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-300">Beranda</a>
+                <a href="/layanan" class="text-amber-400 font-semibold">Layanan</a>
+                <a href="/proyek" class="text-gray-300">Proyek</a>
+                <a href="/informasi" class="text-gray-300">Informasi</a>
+                <a href="/kontak" class="text-gray-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header-bg pt-48 pb-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="reveal">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white">Layanan Kami</h1>
+                    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Menyediakan spektrum solusi yang luas dan terintegrasi untuk menjawab setiap tantangan proyek Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Details Section -->
+        <section class="py-24 space-y-24">
+            
+            <!-- Kategori 1: Konstruksi & Teknik -->
+            <div id="konstruksi" class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <img src="assets/layanan/kontruksi.png" alt="Layanan Konstruksi" class="rounded-xl shadow-2xl w-full h-full object-cover">
+                    </div>
+                    <div class="reveal">
+                        <i data-lucide="hard-hat" class="w-16 h-16 text-amber-400 mb-6"></i>
+                        <h2 class="text-4xl font-bold text-white mb-4">Konstruksi Teknik</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Kami menyediakan layanan konstruksi dan rekayasa teknik secara menyeluruh. Dari tahap perencanaan arsitektural, pembangunan struktur, hingga instalasi teknis yang krusial dan pekerjaan penyelesaian akhir yang presisi. Kami memastikan setiap detail proyek Anda dikerjakan dengan standar kualitas dan keamanan tertinggi.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Jasa Arsitektur (KBLI 71101)</span> Perancangan dan konsultasi arsitektur.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Pekerjaan Penyelesaian Bangunan (KBLI 43300)</span> Pengerjaan akhir pada proyek konstruksi.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Pengecatan (KBLI 43303)</span> Pengecatan interior dan eksterior profesional.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Instalasi Listrik (KBLI 43211)</span> Pemasangan, perbaikan, dan perawatan instalasi listrik.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Instalasi Saluran Air (KBLI 43221)</span> Pemasangan dan perbaikan sistem perpipaan.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Jasa Pengelasan (KBLI 28224)</span> Fabrikasi dan perbaikan melalui pengelasan.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Perdagangan & Ritel -->
+            <div id="perdagangan" class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="lg:order-last reveal">
+                        <img src="https://placehold.co/600x700/57534e/f5f5f4?text=Produk+Elektronik" alt="Layanan Perdagangan" class="rounded-xl shadow-2xl w-full h-full object-cover">
+                    </div>
+                    <div class="lg:order-first reveal">
+                        <i data-lucide="shopping-cart" class="w-16 h-16 text-amber-400 mb-6"></i>
+                        <h2 class="text-4xl font-bold text-white mb-4">Perdagangan Ritel</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Sebagai mitra penyedia barang, kami menawarkan berbagai produk berkualitas untuk kebutuhan personal maupun bisnis. Kami mencakup perdagangan grosir maupun eceran untuk peralatan elektronik, komputer, furnitur, pakaian, dan berbagai perlengkapan rumah tangga lainnya, memastikan Anda mendapatkan produk terbaik dengan harga kompetitif.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Perdagangan Umum</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Elektronik Audio</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Komputer IT</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Alat Telekomunikasi</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Peralatan Rumah Tangga</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Furnitur</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Pakaian</div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-3 flex-shrink-0"></i>Eceran Lainnya</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Digital & Jasa Lainnya -->
+            <div id="digital" class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <img src="assets/layanan/digital.png" alt="Layanan Digital" class="rounded-xl shadow-2xl w-full h-full object-cover">
+                    </div>
+                    <div class="reveal">
+                        <i data-lucide="code-2" class="w-16 h-16 text-amber-400 mb-6"></i>
+                        <h2 class="text-4xl font-bold text-white mb-4">Solusi Digital</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Kami mendukung pertumbuhan bisnis Anda di era modern dengan layanan digital yang inovatif. Mulai dari pengembangan website dan platform digital, desain grafis yang menarik, hingga jasa pelatihan untuk meningkatkan kapabilitas tim Anda. Kami juga menyediakan jasa boga profesional untuk berbagai acara.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Pembuatan Website Platform (KBLI 63122)</span> Pengembangan solusi digital.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Jasa Desain Grafis (KBLI 74100)</span> Pembuatan identitas visual dan materi promosi.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Jasa Pelatihan (KBLI 78439)</span> Pelatihan dan pengembangan SDM.</div></div>
+                            <div class="service-list-item p-4 rounded-lg flex items-center"><i data-lucide="check-circle-2" class="w-6 h-6 text-amber-400 mr-4 flex-shrink-0"></i><div><span class="font-semibold text-white">Jasa Boga Katering (KBLI 56210)</span> Penyediaan makanan untuk acara.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-24 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Proses Kerja</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Empat langkah terstruktur untuk memastikan keberhasilan proyek Anda.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <!-- Step 1 -->
+                    <div class="reveal">
+                        <div class="relative mb-6">
+                            <div class="bg-gray-700 w-24 h-24 rounded-full mx-auto flex items-center justify-center">
+                                <i data-lucide="messages-square" class="w-12 h-12 text-amber-400"></i>
+                            </div>
+                            <span class="absolute -top-2 -right-1/3 md:right-8 lg:right-4 bg-amber-500 text-gray-900 font-bold w-10 h-10 rounded-full flex items-center justify-center text-xl">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Konsultasi Perencanaan</h3>
+                        <p>Kami mendengarkan kebutuhan Anda dan merancang rencana kerja yang detail dan transparan.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="reveal" style="transition-delay: 200ms;">
+                        <div class="relative mb-6">
+                            <div class="bg-gray-700 w-24 h-24 rounded-full mx-auto flex items-center justify-center">
+                                <i data-lucide="pencil-ruler" class="w-12 h-12 text-amber-400"></i>
+                            </div>
+                             <span class="absolute -top-2 -right-1/3 md:right-8 lg:right-4 bg-amber-500 text-gray-900 font-bold w-10 h-10 rounded-full flex items-center justify-center text-xl">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Desain Pengembangan</h3>
+                        <p>Tahap pengembangan desain dan teknis sesuai rencana yang telah disepakati bersama.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="reveal" style="transition-delay: 400ms;">
+                        <div class="relative mb-6">
+                            <div class="bg-gray-700 w-24 h-24 rounded-full mx-auto flex items-center justify-center">
+                                <i data-lucide="construction" class="w-12 h-12 text-amber-400"></i>
+                            </div>
+                             <span class="absolute -top-2 -right-1/3 md:right-8 lg:right-4 bg-amber-500 text-gray-900 font-bold w-10 h-10 rounded-full flex items-center justify-center text-xl">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Eksekusi Pengawasan</h3>
+                        <p>Pelaksanaan proyek oleh tim ahli kami dengan pengawasan ketat untuk menjamin kualitas.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="reveal" style="transition-delay: 600ms;">
+                        <div class="relative mb-6">
+                            <div class="bg-gray-700 w-24 h-24 rounded-full mx-auto flex items-center justify-center">
+                                <i data-lucide="key-round" class="w-12 h-12 text-amber-400"></i>
+                            </div>
+                             <span class="absolute -top-2 -right-1/3 md:right-8 lg:right-4 bg-amber-500 text-gray-900 font-bold w-10 h-10 rounded-full flex items-center justify-center text-xl">4</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Terima Garansi</h3>
+                        <p>Penyerahan hasil proyek yang telah selesai dengan sempurna, didukung oleh layanan purna jual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+                <!-- About -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">Amanah Teknik Mandiri</h3>
+                    <p class="text-gray-400 pr-8">Perusahaan solusi terintegrasi yang berdedikasi untuk memberikan layanan dan produk berkualitas tinggi dalam bidang konstruksi, perdagangan, dan digital.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/layanan" class="text-gray-400 hover:text-amber-400 transition">Layanan</a></li>
+                        <li><a href="/proyek" class="text-gray-400 hover:text-amber-400 transition">Proyek</a></li>
+                        <li><a href="/informasi" class="text-gray-400 hover:text-amber-400 transition">Informasi</a></li>
+                        <li><a href="/kontak" class="text-gray-400 hover:text-amber-400 transition">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> Jl. By Pass Batujai - Mataram Km. 6, Desa Batujai, Kec. Praya Barat, Kab. Lombok Tengah, NTB</li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> +62 819-5800-0001</li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> cv.amanahteknikmandiri@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> - CV. Amanah Teknik Mandiri</p>
+            </div>
+        </div>   
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
