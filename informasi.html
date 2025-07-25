@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi | Amanah Teknik Mandiri</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Pelajari lebih lanjut tentang Amanah Teknik Mandiri. Visi, misi, nilai-nilai inti, cerita perusahaan, dan informasi legalitas kami.">
+    <meta name="keywords" content="tentang Amanah Teknik Mandiri, profil perusahaan, visi misi, legalitas CV, NIB, NPWP, cerita perusahaan, nilai inti, ATM informasi">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS for advanced styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #111827;
+            --color-dark-secondary: #1f2937; /* gray-800 */
+        }
+
+        .page-header-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x600/000000/333333?text=Ruang+Kerja+ATM');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-link-active {
+            color: var(--color-gold) !important;
+            font-weight: 600;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center space-x-3 text-white">
+                    <!-- TEMPAT LOGO FORMAT PNG -->
+                    <img src="assets/images/logo.png" alt="Logo Amanah Teknik Mandiri" class="h-12 w-auto">
+                    <span class="text-xl font-bold tracking-tight hidden sm:inline">ATM</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="/" class="text-gray-300 hover:text-amber-400 transition">Beranda</a>
+                    <a href="/layanan" class="text-gray-300 hover:text-amber-400 transition">Layanan</a>
+                    <a href="/proyek" class="text-gray-300 hover:text-amber-400 transition">Proyek</a>
+                    <a href="/informasi" class="nav-link-active hover:text-amber-400 transition">Informasi</a>
+                    <a href="/kontak" class="text-gray-300 hover:text-amber-400 transition">Kontak</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-300">Beranda</a>
+                <a href="/layanan" class="text-gray-300">Layanan</a>
+                <a href="/proyek" class="text-gray-300">Proyek</a>
+                <a href="/informasi" class="text-amber-400 font-semibold">Informasi</a>
+                <a href="/kontak" class="text-gray-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header-bg pt-48 pb-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="reveal">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white">Informasi</h1>
+                    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Mengenal lebih dekat fondasi, nilai, dan orang-orang di balik komitmen kami.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Story Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <img src="assets/informasi/tim.png" alt="Tim Amanah Teknik Mandiri" class="rounded-xl shadow-2xl w-full h-full object-cover">
+                    </div>
+                    <div class="reveal">
+                        <h2 class="text-4xl font-bold text-white mb-6">Dari Visi Menjadi Aksi</h2>
+                        <p class="text-lg text-gray-400 mb-4">
+                            Amanah Teknik Mandiri lahir dari sebuah visi sederhana menjadi penyedia solusi yang dapat diandalkan sepenuhnya. Kata <strong class="text-amber-400">"Amanah"</strong> bukan sekadar nama, melainkan janji dan prinsip utama yang kami pegang dalam setiap langkah.
+                        </p>
+                        <p class="text-gray-400 mb-4">
+                            Kami memulai perjalanan dengan fokus pada keahlian teknis di bidang konstruksi dan instalasi. Seiring berjalannya waktu dan tumbuhnya kepercayaan dari para klien, kami menyadari adanya kebutuhan pasar yang lebih luas. Hal ini mendorong kami untuk berkembang secara <strong class="text-amber-400">"Mandiri"</strong>, melebarkan sayap ke sektor perdagangan dan merambah dunia digital.
+                        </p>
+                        <p class="text-gray-400">
+                            Kini, kami bangga menjadi perusahaan multidisiplin yang mampu memberikan solusi terintegrasi, menyatukan keahlian teknis, kualitas produk, dan inovasi digital di bawah satu atap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Section -->
+        <section class="py-24 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="reveal">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="eye" class="w-12 h-12 text-amber-400"></i>
+                            <h3 class="text-3xl font-bold text-white">Visi Kami</h3>
+                        </div>
+                        <p class="text-lg text-gray-400">Menjadi perusahaan penyedia solusi terintegrasi yang terdepan dan terpercaya di Indonesia, dikenal karena kualitas, inovasi, dan integritas dalam setiap layanan dan produk yang ditawarkan.</p>
+                    </div>
+                    <div class="reveal">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="target" class="w-12 h-12 text-amber-400"></i>
+                            <h3 class="text-3xl font-bold text-white">Misi Kami</h3>
+                        </div>
+                        <ul class="space-y-2 text-lg text-gray-400 list-inside">
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-amber-400 mr-3 mt-1.5"></i>Menyediakan layanan teknis & konstruksi berstandar tinggi.</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-amber-400 mr-3 mt-1.5"></i>Menjadi pusat perdagangan produk berkualitas dan kompetitif.</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-amber-400 mr-3 mt-1.5"></i>Mengembangkan solusi digital inovatif untuk klien.</li>
+                            <li class="flex items-start"><i data-lucide="check" class="w-5 h-5 text-amber-400 mr-3 mt-1.5"></i>Membangun hubungan jangka panjang berbasis kepercayaan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Core Values Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Nilai Kami</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Prinsip yang menjadi kompas dalam setiap tindakan dan keputusan kami.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-gray-800 p-8 rounded-lg reveal">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-amber-400 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-white mb-2">Amanah</h4>
+                        <p>Menjaga kepercayaan dengan integritas dan tanggung jawab penuh.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg reveal" style="transition-delay: 150ms;">
+                        <i data-lucide="gem" class="w-12 h-12 text-amber-400 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-white mb-2">Kualitas</h4>
+                        <p>Berkomitmen pada standar tertinggi dalam setiap hasil kerja dan produk.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg reveal" style="transition-delay: 300ms;">
+                        <i data-lucide="users" class="w-12 h-12 text-amber-400 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-white mb-2">Profesionalisme</h4>
+                        <p>Bekerja dengan kompetensi, etika, dan sikap yang melayani.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg reveal" style="transition-delay: 450ms;">
+                        <i data-lucide="lightbulb" class="w-12 h-12 text-amber-400 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-white mb-2">Inovasi</h4>
+                        <p>Selalu mencari cara baru yang lebih baik untuk memberikan solusi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legalitas Section -->
+        <section class="py-24 bg-gray-800">
+            <div class="container mx-auto px-4 text-center reveal">
+                <i data-lucide="file-badge-2" class="w-16 h-16 text-amber-400 mx-auto mb-6"></i>
+                <h2 class="text-4xl font-bold text-white mb-4">Kredibilitas Legalitas</h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-8">Kami beroperasi sebagai badan usaha yang terdaftar secara resmi dan mematuhi semua peraturan yang berlaku di Indonesia, memberikan Anda jaminan keamanan dan kepastian hukum dalam setiap kerja sama.</p>
+                <div class="inline-flex flex-col sm:flex-row gap-6 text-left bg-gray-900 p-8 rounded-lg">
+                    <div>
+                        <p class="text-sm text-gray-500">Nama Perusahaan</p>
+                        <p class="text-xl font-semibold text-white">CV. Amanah Teknik Mandiri</p>
+                    </div>
+                    <div class="border-t sm:border-t-0 sm:border-l border-gray-700 px-0 sm:px-6 pt-6 sm:pt-0">
+                        <p class="text-sm text-gray-500">Nomor Induk Berusaha (NIB)</p>
+                        <p class="text-xl font-semibold text-white">01.23.45.67.89</p>
+                    </div>
+                     <div class="border-t sm:border-t-0 sm:border-l border-gray-700 px-0 sm:px-6 pt-6 sm:pt-0">
+                        <p class="text-sm text-gray-500">NPWP</p>
+                        <p class="text-xl font-semibold text-white">01.23.45.67.89</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">Amanah Teknik Mandiri</h3>
+                    <p class="text-gray-400 pr-8">Perusahaan solusi terintegrasi yang berdedikasi untuk memberikan layanan dan produk berkualitas tinggi dalam bidang konstruksi, perdagangan, dan digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                         <li><a href="index.html" class="text-gray-400 hover:text-amber-400 transition">Beranda</a></li>
+                        <li><a href="layanan.html" class="text-gray-400 hover:text-amber-400 transition">Layanan</a></li>
+                        <li><a href="proyek.html" class="text-gray-400 hover:text-amber-400 transition">Proyek</a></li>
+                        <li><a href="kontak.html" class="text-gray-400 hover:text-amber-400 transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Alamat Perusahaan Anda]</li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Nomor Telepon]</li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Email Perusahaan]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> Amanah Teknik Mandiri. Semua Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('nav-scrolled');
+                else navbar.classList.remove('nav-scrolled');
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
