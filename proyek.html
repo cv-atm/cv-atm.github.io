@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek | Amanah Teknik Mandiri</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lihat galeri dan portofolio proyek terbaik dari Amanah Teknik Mandiri. Bukti nyata kualitas kami dalam proyek konstruksi, instalasi, dan digital.">
+    <meta name="keywords" content="portofolio proyek, galeri konstruksi, hasil kerja, proyek villa, renovasi ruko, website e-commerce, studi kasus, ATM proyek">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS for advanced styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #111827;
+            --color-dark-secondary: #1f2937; /* gray-800 */
+        }
+
+        .page-header-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x600/000000/333333?text=Galeri+Proyek');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-link-active {
+            color: var(--color-gold) !important;
+            font-weight: 600;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .filter-btn {
+            background-color: var(--color-dark-secondary);
+            border: 1px solid #374151; /* gray-700 */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filter-btn:hover {
+            background-color: #374151; /* gray-700 */
+        }
+        .filter-btn.active {
+            background-color: var(--color-gold);
+            color: var(--color-dark);
+            border-color: var(--color-gold);
+        }
+
+        .portfolio-card .overlay {
+            opacity: 0;
+            background: linear-gradient(to top, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0.7), transparent);
+            transition: opacity 0.4s ease;
+        }
+        .portfolio-card:hover .overlay {
+            opacity: 1;
+        }
+        .portfolio-card img {
+            transition: transform 0.4s ease;
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio-card .content {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+        .portfolio-card:hover .content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center space-x-3 text-white">
+                    <!-- TEMPAT LOGO FORMAT PNG -->
+                    <img src="assets/images/logo.png" alt="Logo Amanah Teknik Mandiri" class="h-12 w-auto">
+                    <span class="text-xl font-bold tracking-tight hidden sm:inline">ATM</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="/" class="text-gray-300 hover:text-amber-400 transition">Beranda</a>
+                    <a href="/layanan" class="text-gray-300 hover:text-amber-400 transition">Layanan</a>
+                    <a href="/proyek" class="nav-link-active hover:text-amber-400 transition">Proyek</a>
+                    <a href="/informasi" class="text-gray-300 hover:text-amber-400 transition">Informasi</a>
+                    <a href="/kontak" class="text-gray-300 hover:text-amber-400 transition">Kontak</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-300">Beranda</a>
+                <a href="/layanan" class="text-gray-300">Layanan</a>
+                <a href="/proyek" class="text-amber-400 font-semibold">Proyek</a>
+                <a href="/informasi" class="text-gray-300">Informasi</a>
+                <a href="/kontak" class="text-gray-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header-bg pt-48 pb-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="reveal">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white">Proyek</h1>
+                    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Bukti nyata dari komitmen, keahlian, dan kualitas yang kami berikan dalam setiap karya.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-4">
+                <!-- Filter Buttons -->
+                <div class="flex justify-center flex-wrap gap-3 mb-12 reveal">
+                    <button class="filter-btn active py-2 px-6 rounded-full font-semibold" data-filter="all">Semua</button>
+                    <button class="filter-btn py-2 px-6 rounded-full font-semibold" data-filter="konstruksi">Konstruksi</button>
+                    <button class="filter-btn py-2 px-6 rounded-full font-semibold" data-filter="teknik">Instalasi Teknik</button>
+                    <button class="filter-btn py-2 px-6 rounded-full font-semibold" data-filter="digital">Digital Kreatif</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Proyek 1 -->
+                    <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="konstruksi">
+                        <img src="assets/proyek/konstruksi.png" alt="Proyek Konstruksi" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Konstruksi</p>
+                                <h3 class="text-xl font-bold text-white">Penyelesaian Villa Modern</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyek 2 -->
+                    <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="teknik">
+                        <img src="assets/proyek/instalasi.png" alt="Proyek Instalasi" class="w-full h-full object-cover">
+                         <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Instalasi Teknik</p>
+                                <h3 class="text-xl font-bold text-white">Instalasi Listrik Pabrik</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyek 3 -->
+                     <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="digital">
+                        <img src="assets/proyek/digital.png" alt="Proyek Digital" class="w-full h-full object-cover">
+                         <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Digital Kreatif</p>
+                                <h3 class="text-xl font-bold text-white">Website E-commerce FurniHome</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyek 4 -->
+                    <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="konstruksi">
+                        <img src="assets/proyek/renovasi.png" alt="Proyek Renovasi" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Konstruksi</p>
+                                <h3 class="text-xl font-bold text-white">Renovasi Fasad Ruko</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyek 5 -->
+                    <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="digital">
+                        <img src="assets/proyek/desain.png" alt="Proyek Desain" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Digital Kreatif</p>
+                                <h3 class="text-xl font-bold text-white">Branding Logo Kopi Senja</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyek 6 -->
+                    <div class="portfolio-card group rounded-lg overflow-hidden relative reveal" data-category="teknik">
+                        <img src="assets/proyek/plumbing.png" alt="Proyek Plumbing" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 flex items-end p-6">
+                            <div class="content">
+                                <p class="text-amber-300 text-sm font-semibold">Instalasi Teknik</p>
+                                <h3 class="text-xl font-bold text-white">Instalasi Pipa Air Bersih Hotel</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gray-800">
+            <div class="container mx-auto px-4 py-20">
+                <div class="text-center reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Proyek Serupa?</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto mb-8">Setiap proyek besar dimulai dari satu langkah kecil. Mari diskusikan visi Anda bersama kami.</p>
+                    <a href="kontak.html" class="bg-amber-500 text-gray-900 font-bold py-4 px-10 rounded-lg text-xl hover:bg-amber-600 transition-transform transform hover:scale-105 inline-block">Mulai Konsultasi Gratis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">Amanah Teknik Mandiri</h3>
+                    <p class="text-gray-400 pr-8">Perusahaan solusi terintegrasi yang berdedikasi untuk memberikan layanan dan produk berkualitas tinggi dalam bidang konstruksi, perdagangan, dan digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                         <li><a href="index.html" class="text-gray-400 hover:text-amber-400 transition">Beranda</a></li>
+                        <li><a href="layanan.html" class="text-gray-400 hover:text-amber-400 transition">Layanan</a></li>
+                        <li><a href="informasi.html" class="text-gray-400 hover:text-amber-400 transition">Informasi</a></li>
+                        <li><a href="kontak.html" class="text-gray-400 hover:text-amber-400 transition">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Alamat Perusahaan Anda]</li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Nomor Telepon]</li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Email Perusahaan]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> Amanah Teknik Mandiri. Semua Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            // --- Navigation Logic ---
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('nav-scrolled');
+                else navbar.classList.remove('nav-scrolled');
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Reveal on Scroll Animation ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // --- Portfolio Filter Logic ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    // Show/hide portfolio items
+                    portfolioCards.forEach(card => {
+                        card.style.display = 'none'; // Hide all cards initially
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            // Use a fade-in effect or just display block
+                            card.style.display = 'block';
+                        }
+                    });
+                });
+            });
+
+            // --- Footer Year ---
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
