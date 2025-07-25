@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | Amanah Teknik Mandiri</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Hubungi Amanah Teknik Mandiri. Temukan alamat, nomor telepon, WhatsApp, email, media sosial, dan peta lokasi kantor kami.">
+    <meta name="keywords" content="kontak ATM, alamat Amanah Teknik Mandiri, nomor telepon, hubungi kami, peta lokasi, WhatsApp bisnis, email perusahaan, FAQ">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS for advanced styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* gray-900 */
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        :root {
+            --color-gold: #D4AF37;
+            --color-dark: #111827;
+            --color-dark-secondary: #1f2937; /* gray-800 */
+        }
+
+        .page-header-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x600/000000/333333?text=Meja+Kerja+Modern');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-link-active {
+            color: var(--color-gold) !important;
+            font-weight: 600;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .map-container iframe {
+            filter: grayscale(1) contrast(1.2) opacity(0.8);
+            transition: filter 0.3s;
+        }
+        .map-container:hover iframe {
+            filter: grayscale(0) contrast(1) opacity(1);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding-top 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center space-x-3 text-white">
+                    <!-- TEMPAT LOGO FORMAT PNG -->
+                    <img src="logo-atm.png" alt="Logo Amanah Teknik Mandiri" class="h-12 w-auto">
+                    <span class="text-xl font-bold tracking-tight hidden sm:inline">ATM</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="/" class="text-gray-300 hover:text-amber-400 transition">Beranda</a>
+                    <a href="/layanan" class="text-gray-300 hover:text-amber-400 transition">Layanan</a>
+                    <a href="/proyek" class="text-gray-300 hover:text-amber-400 transition">Proyek</a>
+                    <a href="/informasi" class="text-gray-300 hover:text-amber-400 transition">Informasi</a>
+                    <a href="/kontak" class="nav-link-active hover:text-amber-400 transition">Kontak</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white"><i data-lucide="menu" class="w-7 h-7"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-300">Beranda</a>
+                <a href="/layanan" class="text-gray-300">Layanan</a>
+                <a href="/proyek" class="text-gray-300">Proyek</a>
+                <a href="/informasi" class="text-gray-300">Informasi</a>
+                <a href="/kontak" class="text-amber-400 font-semibold">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header-bg pt-48 pb-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="reveal">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-white">Hubungi Kami</h1>
+                    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Kami siap mendengar dari Anda. Mari diskusikan bagaimana kami bisa membantu mewujudkan proyek Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Details & Form Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-5 gap-12">
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-2 reveal">
+                        <h2 class="text-3xl font-bold text-white mb-6">Informasi Kontak</h2>
+                        <p class="text-gray-400 mb-8">Gunakan informasi di bawah ini untuk menghubungi kami melalui telepon, email, atau kunjungi kantor kami secara langsung.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="map-pin" class="w-8 h-8 text-amber-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Alamat Kantor</h3>
+                                    <p class="text-gray-400">Jl. By Pass Batujai - Mataram Km. 6, Desa Batujai, Kec. Praya Barat, Kab. Lombok Tengah, NTB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="mail-open" class="w-8 h-8 text-amber-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Email Resmi</h3>
+                                    <a href="mailto:info@amanahteknikmandiri.com" class="text-gray-400 hover:text-amber-400 transition">cv.amanahteknikmandiri@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="phone" class="w-8 h-8 text-amber-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Telepon Kantor</h3>
+                                    <a href="tel:+6200000000" class="text-gray-400 hover:text-amber-400 transition">+62 819-5800-0001</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="message-circle" class="w-8 h-8 text-amber-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">WhatsApp)</h3>
+                                    <a href="https://wa.me/6281234567890" target="_blank" class="text-gray-400 hover:text-amber-400 transition">+62 819-5800-0001</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 pt-8 border-t border-gray-700">
+                            <h3 class="text-xl font-semibold text-white mb-4">Media Sosial</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-400 hover:text-amber-400 transition"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-amber-400 transition"><i data-lucide="facebook" class="w-7 h-7"></i></a>
+                                <a href="#" class="text-gray-400 hover:text-amber-400 transition"><i data-lucide="linkedin" class="w-7 h-7"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-3 bg-gray-800 p-8 rounded-lg reveal">
+                        <h2 class="text-3xl font-bold text-white mb-6">Kirim Pesan</h2>
+                        <form action="#" method="POST">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="nama" class="block mb-2 font-medium text-gray-400">Nama Lengkap</label>
+                                    <input type="text" id="nama" name="nama" class="w-full bg-gray-700 border-2 border-gray-600 rounded-lg px-4 py-3 text-white focus:border-amber-500 focus:ring-0 outline-none transition" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 font-medium text-gray-400">Alamat Email</label>
+                                    <input type="email" id="email" name="email" class="w-full bg-gray-700 border-2 border-gray-600 rounded-lg px-4 py-3 text-white focus:border-amber-500 focus:ring-0 outline-none transition" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subjek" class="block mb-2 font-medium text-gray-400">Subjek Pesan</label>
+                                <input type="text" id="subjek" name="subjek" class="w-full bg-gray-700 border-2 border-gray-600 rounded-lg px-4 py-3 text-white focus:border-amber-500 focus:ring-0 outline-none transition" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="pesan" class="block mb-2 font-medium text-gray-400">Pesan Anda</p>
+                                <textarea id="pesan" name="pesan" rows="6" class="w-full bg-gray-700 border-2 border-gray-600 rounded-lg px-4 py-3 text-white focus:border-amber-500 focus:ring-0 outline-none transition" required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-amber-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg hover:bg-amber-600 transition">Kirim Pesan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-container reveal">
+            <iframe src="https://goo.gl/maps/v1kafaCGT84rRG5ZA" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-24 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Pertanyaan Umum)</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Temukan jawaban cepat untuk pertanyaan yang paling sering diajukan.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-gray-900 rounded-lg reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-xl font-semibold text-white">Apa saja area layanan Amanah Teknik Mandiri?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 text-amber-400 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Kami melayani proyek di seluruh wilayah [Sebutkan Kota/Provinsi Utama Anda] dan sekitarnya. Untuk proyek berskala besar, kami bersedia mempertimbangkan lokasi di luar area layanan utama. Silakan hubungi kami untuk mendiskusikan detail lokasi proyek Anda.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="bg-gray-900 rounded-lg reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-xl font-semibold text-white">Bagaimana cara meminta penawaran harga?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 text-amber-400 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Anda dapat meminta penawaran harga dengan mengisi formulir di halaman ini, atau menghubungi kami langsung melalui WhatsApp untuk respon yang lebih cepat. Mohon siapkan detail awal mengenai proyek Anda agar kami dapat memberikan estimasi yang lebih akurat.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="bg-gray-900 rounded-lg reveal">
+                        <button class="accordion-header w-full text-left p-6 flex justify-between items-center">
+                            <span class="text-xl font-semibold text-white">Apakah ada garansi untuk pekerjaan konstruksi?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 text-amber-400 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Ya, kami memberikan garansi untuk pekerjaan konstruksi dan instalasi yang kami lakukan. Jangka waktu dan cakupan garansi akan dijelaskan secara rinci dalam kontrak kerja sama sebelum proyek dimulai. Kepuasan dan ketenangan Anda adalah prioritas kami.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">Amanah Teknik Mandiri</h3>
+                    <p class="text-gray-400 pr-8">Perusahaan solusi terintegrasi yang berdedikasi untuk memberikan layanan dan produk berkualitas tinggi dalam bidang konstruksi, perdagangan, dan digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                         <li><a href="index.html" class="text-gray-400 hover:text-amber-400 transition">Beranda</a></li>
+                        <li><a href="layanan.html" class="text-gray-400 hover:text-amber-400 transition">Layanan</a></li>
+                        <li><a href="proyek.html" class="text-gray-400 hover:text-amber-400 transition">Proyek</a></li>
+                        <li><a href="informasi.html" class="text-gray-400 hover:text-amber-400 transition">Informasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Alamat Perusahaan Anda]</li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Nomor Telepon]</li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i> [Email Perusahaan]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> Amanah Teknik Mandiri. Semua Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('nav-scrolled');
+                else navbar.classList.remove('nav-scrolled');
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // --- FAQ Accordion Logic ---
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.style.paddingTop = '0px';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.style.paddingTop = '0.5rem';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
